@@ -4,6 +4,7 @@ import {
     Platform,
     StyleSheet,
     Text,
+    Button,
     View
 } from 'react-native';
 
@@ -14,14 +15,32 @@ const instructions = Platform.select({
     'Shake or press menu button for dev menu',
 });
 
-export default class Frist extends Component<{}> {
+export default class FristPage extends React.Component<{}> {
     static navigationOptions = {
-        title: '',
+        header: null
     };
 
+    constructor(props) {
+        super(props);
+        this.state = {};
+    };
+
+    GoHomePage() {
+
+        const navigate = this.props.navigation.navigate;
+         navigate('Home', {} , '');
+    }
+
+
     render() {
+
         return (
             <View style={styles.container}>
+                <Text>Do something</Text>
+                <Button
+                    onPress = {this.GoHomePage.bind(this)}
+                    title="Go >>"
+                />
             </View>
         );
     }

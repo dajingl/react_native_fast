@@ -1,12 +1,18 @@
 
 import { AppRegistry } from 'react-native';
-import {StackNavigator} from 'react-navigation';
-import FristPge from './js/frist'
-import HomePage from './js/home';
+import {StackNavigator,TabNavigator} from 'react-navigation';
+import FristPage from './js/pages/frist'
+import HomePage from './js/pages/home';
+import MePage from './js/pages/me';
+
+const TabNav = TabNavigator({
+    Mine: {screen: HomePage},
+    Me: {screen: MePage}
+})
 
 const rout =  StackNavigator({
-    Frist: {screen: FristPge},
-    Home: {screen: HomePage},
+    Mine: {screen: FristPage},
+    Home: {screen: TabNav}
 });
 
 
