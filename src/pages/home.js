@@ -3,14 +3,33 @@ import React, { Component } from 'react';
 import {
     Platform,
     StyleSheet,
+    Image,
     Text,
     View
 } from 'react-native';
 
 export default class HomePage extends React.Component<{}> {
     static navigationOptions = {
-        title: 'home',
+        title: 'Home',
+        tabBarLabel: 'home',
+        tabBarIcon: ({ tintColor}) => (
+            <Image
+                source={require('../assets/imgs/tab-home.png')}
+                style={[styles.icon, {tintColor: tintColor}]}
+            />)
     };
+
+    constructor(props) {
+        super(props);
+        this.state = {};
+    }
+
+    componentDidMount() {
+    }
+
+    componentWillUnmount() {
+    }
+
 
     render() {
         return (
