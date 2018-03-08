@@ -1,31 +1,19 @@
+import React, { Component } from 'react';
+import { Provider } from 'react-redux';
+import Routers from './routes';
+import getStore from './redux'
 
-import { AppRegistry } from 'react-native';
-import {StackNavigator,TabNavigator} from 'react-navigation';
-import FristPage from './pages/frist'
-import HomePage from './pages/home';
-import MePage from './pages/me';
-import NewPage from './pages/news';
+const store = getStore();
 
-const TabNav = TabNavigator({
-    Mine: {screen: NewPage},
-    Home: {screen: HomePage},
-    Me: {screen: MePage}
-
-},{
-    navigationOptions: {
-    headerLeft: null,
+export default class App extends Component {
+    constructor(props) {
+        super(props);
     }
-});
-
-const rout =  StackNavigator({
-    Mine: {screen: FristPage},
-    Home: {screen: TabNav}
-},{
-    navigationOptions: {
-
+    render() {
+        return (
+            <Provider store={store}>
+                <Routers/>
+            </Provider>
+        )
     }
-});
-
-
-
-AppRegistry.registerComponent('react_native_fast', () => rout);
+}

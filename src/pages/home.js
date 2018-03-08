@@ -10,13 +10,6 @@ import {
 
 export default class HomePage extends React.Component<{}> {
     static navigationOptions = {
-        title: 'Home',
-        tabBarLabel: 'home',
-        tabBarIcon: ({ tintColor}) => (
-            <Image
-                source={require('../assets/imgs/tab-home.png')}
-                style={[styles.icon, {tintColor: tintColor}]}
-            />)
     };
 
     constructor(props) {

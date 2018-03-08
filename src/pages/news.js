@@ -10,13 +10,6 @@ import {
 
 export default class NewPage extends React.Component<{}> {
     static navigationOptions = {
-        title: 'News',
-        tabBarLabel: 'news',
-        tabBarIcon: ({ tintColor}) => (
-            <Image
-                source={require('../assets/imgs/tab-news.png')}
-                style={[styles.icon, {tintColor: tintColor}]}
-            />)
     };
 
     constructor(props) {
@@ -44,9 +37,5 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#F5FCFF',
-    },
-    icon: {
-        width: 25,
-        height: 25,
-    },
+    }
 });
