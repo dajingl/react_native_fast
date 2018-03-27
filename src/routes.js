@@ -3,10 +3,11 @@ import {StackNavigator,TabNavigator} from 'react-navigation';
 import {
     Image, StyleSheet,
 } from 'react-native';
-import FristPage from './pages/frist'
-import HomePage from './pages/home';
-import MePage from './pages/me';
-import NewPage from './pages/news';
+import {
+    FristPage,
+    HomePage,
+    MePage,
+    NewPage} from './pages'
 
 const TabNav = TabNavigator({
     New: {screen: NewPage},
