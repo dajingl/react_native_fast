@@ -3,34 +3,29 @@ import React, { Component } from 'react';
 import {
     Platform,
     StyleSheet,
+    Image,
     Text,
-    Button,
     View
 } from 'react-native';
 
-export default class FristPage extends React.Component<{}> {
+export default class AddressListScreen extends Component {
     static navigationOptions = {
-        header: null
     };
+
     constructor(props) {
         super(props);
         this.state = {};
-    };
-
-    GoHomePage() {
-        const navigate = this.props.navigation.navigate;
-         navigate('Home', {} , '');
     }
 
+    componentDidMount() {
+    }
+
+    componentWillUnmount() {
+    }
 
     render() {
         return (
             <View style={styles.container}>
-                <Text>Do something</Text>
-                <Button
-                    onPress = {this.GoHomePage.bind(this)}
-                    title="Go >>"
-                />
             </View>
         );
     }
@@ -42,5 +37,5 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#F5FCFF',
-    },
+    }
 });

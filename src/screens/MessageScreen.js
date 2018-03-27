@@ -8,7 +8,7 @@ import {
     View
 } from 'react-native';
 
-export default class NewPage extends React.Component<{}> {
+export default class MessageScreen extends React.Component<{}> {
     static navigationOptions = {
     };
 

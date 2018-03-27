@@ -8,7 +8,7 @@ import {
     View
 } from 'react-native';
 
-export default class MePage extends React.Component<{}> {
+export default class CommunityScreen extends React.Component<{}> {
     static navigationOptions = {
     };
 
@@ -22,6 +22,7 @@ export default class MePage extends React.Component<{}> {
 
     componentWillUnmount() {
     }
+
 
     render() {
         return (
@@ -37,5 +38,5 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#F5FCFF',
-    }
+    },
 });

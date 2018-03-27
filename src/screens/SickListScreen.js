@@ -8,7 +8,7 @@ import {
     View
 } from 'react-native';
 
-export default class HomePage extends React.Component<{}> {
+export default class SickListScreen extends React.Component<{}> {
     static navigationOptions = {
     };
 
@@ -22,7 +22,6 @@ export default class HomePage extends React.Component<{}> {
 
     componentWillUnmount() {
     }
-
 
     render() {
         return (
@@ -38,5 +37,5 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#F5FCFF',
-    },
+    }
 });
