@@ -7,7 +7,7 @@ if (!__DEV__) {
     global.console = {
         info: () => {},
         log: () => {},
-        warn: () => {},
+        // warn: () => {},
         error: () => {},
     };
 }
